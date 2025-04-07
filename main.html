@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronan Kian Mangubat</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .navbar {
+            background-color: rgb(211, 0, 70);
+        }
+
+        .container {
+            max-width: 1100px;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            line-height: 1;
+        }
+
+        .ronan-font {
+            font-family: "Permanent Marker", cursive;
+        }
+
+        .reg-font {
+            font-family: "Outfit", sans-serif;
+        }
+
+        .navbar-toggler {
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            font-weight: 700;
+            background-color: rgb(235, 235, 235);
+            font-size: 16px;
+            padding: 7px 25px;
+            border-radius: 50px;
+            border: none !important;
+            box-shadow: none !important;
+            transition: 0.2s ease-in-out;
+        }
+
+        .navbar-toggler-icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 25px;
+            height: 18px;
+        }
+
+        .navbar-toggler:hover {
+            filter: brightness(.8);
+        }
+
+        @media (max-width: 991px) {
+            .navbar-toggler {
+                position: absolute;
+                right: 15px;
+                top: 10px;
+            }
+        }
+
+        .navbar-collapse {
+            justify-content: center;
+        }
+
+        .card {
+            background-color: rgb(21, 21, 21);
+            color: white;
+        }
+
+        .showcase-title {
+            font-family: 'Inter', Arial, Helvetica, sans-serif;
+            font-weight: 1000;
+            color: rgb(211, 0, 70);
+        }
+
+        .honor-row {
+            background-color: #151515;
+            padding: 20px 0;
+            border-radius: 5px;
+            opacity: 1;
+            box-sizing: border-box;
+        }
+
+        .honor-box {
+            text-align: center;
+            height: 100%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .honor-box img {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 10px;
+            object-fit: contain;
+        }
+
+        .honor-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #f8f9fa;
+        }
+
+        .tech-img {
+            max-width: 60px;
+            aspect-ratio: 1;
+            object-fit: contain;
+        }
+
+        #about {
+            padding: 80px 0;
+        }
+
+        .about-title {
+            font-family: 'Inter', Arial, Helvetica, sans-serif;
+            font-weight: 1000;
+            color: rgb(211, 0, 70);
+        }
+
+        .about-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-image-container {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .about-texts h1 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .about-texts p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .about-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .about-buttons a {
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .project-link-button {
+            background-color: rgb(211, 0, 70);
+            color: white;
+        }
+
+        .project-link-button:hover {
+            background-color: #424649;
+        }
+
+        .about-link-button {
+            background-color: white;
+            color: #212529;
+        }
+
+        .about-link-button:hover {
+            background-color: #424649;
+        }
+
+        @media (max-width: 992px) {
+            .about-wrapper {
+                flex-direction: column;
+            }
+
+            .about-image-container {
+                width: 100%;
+                max-width: 500px;
+                height: auto;
+                aspect-ratio: 1/1;
+            }
+        }
+
+        .services-section {
+            padding: 80px 0;
+        }
+
+        .services-title {
+            font-family: 'Inter', Arial, Helvetica, sans-serif;
+            font-weight: 1000;
+            color: rgb(211, 0, 70);
+        }
+
+        .service-card {
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #131313;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: #0d6efd;
+            margin-bottom: 20px;
+        }
+
+        .service-card h2 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .service-card p {
+            color: #6c757d;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background-color: #212529;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-text {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+        }
+
+        .footer-buttons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-link {
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .footer-link i {
+            font-size: 1.25rem;
+        }
+
+        .made-with {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        .made-with span {
+            color: #ff6b6b;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md w-100">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <!-- Web Name -->
+            <a class="navbar-brand fs-4 text-white ronan-font" href="#"><span class="fs-2">R</span>onan</a>
+
+            <!-- Toggler Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09"
+                aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarsExample09">
+                <ul class="navbar-nav gap-md-3 reg-font">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#projects">Showcase</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#stacks">Stacks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="https://www.linkedin.com/in/mangubatronankian">
+                            <i class="fas fa-fire-alt text-warning"></i> Inquire Now</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Button -->
+            <div class="d-none d-md-block" id="navButton">
+                <a href="https://github.com/ronankian" class="btn btn-light fw-bold px-4 py-2 rounded-pill shadow-sm"
+                    target="_blank" rel="noopener noreferrer">
+                    GitHub
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+    <main class="bg-dark text-white">
+
+        <section class="py-3 text-center container">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <img src="assets/profile_pic.png" alt="profile_pic" class="img-fluid w-50 rounded-circle">
+                    <h1 class="fw-strong">Hi, I'm Ronan Kian Mangubat</h1>
+                    <p class="lead text-white">I’m a Computer Engineering student aspiring to be a
+                        <span style="color: rgb(211, 0, 70);">full-stack</span>
+
+                        developer,
+                        passionate about building seamless and
+                        efficient web applications.
+                    </p>
+                    <p>
+                        <a href="#projects" class="btn btn-light text-dark my-2 mx-2">
+                            <i class="fas fa-cubes"></i> Projects</a>
+                        <a href="#" class="btn my-2"
+                            style="background-color: rgb(21, 21, 21); color: white;  border-color: rgb(21, 21, 21);">
+                            <i class="fas fa-download"></i> Resume</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Showcase -->
+        <div class="album py-5" id="projects">
+            <div class="container">
+                <h1 class="showcase-title text-center pb-2" style="color: rgb(211, 0, 70);">Project Showcase</h1>
+                <p class="text-center pb-5">List of my projects.</p>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm h-100">
+                            <a href="https://github.com/ronankian/Color-Switch"
+                                class="text-decoration-none text-reset stretched-link" target="_blank"
+                                rel="noopener noreferrer">
+                                <img src="assets/upd.png" alt="WebApp" class="card-img-top img-fluid"
+                                    style="height: 200px; object-fit: cover;">
+                                <div class="card-body d-flex flex-column">
+                                    <h3>GameVerse</h3>
+                                    <p class="card-text">A gaminghub web application</p>
+                                    <div class="mt-auto">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <span class="badge badge-dark">HTML</span>
+                                                <span class="badge badge-dark">Bootstrap</span>
+                                                <span class="badge badge-dark">CSS</span>
+                                                <span class="badge badge-dark">Javascript</span>
+                                                <span class="badge badge-dark">PHP</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100">
+                            <a href="https://github.com/ronankian/GameVerse"
+                                class="text-decoration-none text-reset stretched-link" target="_blank"
+                                rel="noopener noreferrer">
+                                <img src="assets/csw.png" alt="MobileApp" class="card-img-top img-fluid"
+                                    style="height: 200px; object-fit: cover;">
+                                <div class="card-body d-flex flex-column">
+                                    <h3>Color Switch</h3>
+                                    <p class="card-text">A mobile game application</p>
+                                    <div class="mt-auto">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <span class="badge badge-dark">Flutter</span>
+                                                <span class="badge badge-dark">Flame</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100">
+                            <img src="assets/portfolio.png" alt="Website" class="card-img-top img-fluid"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h3>Portfolio</h3>
+                                <p class="card-text">My first personal portfolio</p>
+                                <div class="mt-auto">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <span class="badge badge-dark">HTML</span>
+                                            <span class="badge badge-dark">Bootstrap</span>
+                                            <span class="badge badge-dark">CSS</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Academic Achievements -->
+        <div class="honor-row my-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <!-- First Column -->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <div class="honor-box">
+                            <img src="assets/dpjes.png" alt="DPJES">
+                            <div class="honor-title">DPJES</div>
+                            <div>Special Awardee</div>
+                        </div>
+                    </div>
+
+                    <!-- Second Column -->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <div class="honor-box">
+                            <img src="assets/rnhs.png" alt="RNHS">
+                            <div class="honor-title">RNHS</div>
+                            <div>With Honor</div>
+                        </div>
+                    </div>
+
+                    <!-- Third Column -->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <div class="honor-box">
+                            <img src="assets/sas.png" alt="SAS">
+                            <div class="honor-title">SAS</div>
+                            <div>Bronze Awardee</div>
+                        </div>
+                    </div>
+
+                    <!-- Fourth Column -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="honor-box">
+                            <img src="assets/ccat.png" alt="CVSU-CCAT">
+                            <div class="honor-title">CVSU-CCAT</div>
+                            <div>BSCPE, 2026</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools & Stacks -->
+        <div class="stacks py-5" id="stacks">
+            <div class="container">
+                <h1 class="showcase-title text-center pb-5" style="color: rgb(211, 0, 70);">Technologies</h1>
+                <div class="row row-cols-3 row-cols-md-6 row-cols-lg-9 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm h-100 d-flex align-items-center justify-content-center p-3">
+                            <img src="assets/bootstrap.png" alt="HTML" class="tech-img">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 d-flex align-items-center justify-content-center p-3">
+                            <img src="assets/c++.png" alt="CSS" class="tech-img">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 d-flex align-items-center justify-content-center p-3">
+                            <img src="assets/css.png" alt="JavaScript" class="tech-img">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 d-flex align-items-center justify-content-center p-3">
+                            <img src="assets/flame.png" alt="Bootstrap" class="tech-img">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 d-flex align-items-center justify-content-center p-3">
+                            <img src="assets/flutter.png" alt="Flutter" class="tech-img">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 d-flex align-items-center justify-content-center p-3">
+                            <img src="assets/git.png" alt="PHP" class="tech-img">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 d-flex align-items-center justify-content-center p-3">
+                            <img src="assets/html.png" alt="MySQL" class="tech-img">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 d-flex align-items-center justify-content-center p-3">
+                            <img src="assets/javascript.png" alt="React" class="tech-img">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 d-flex align-items-center justify-content-center p-3">
+                            <img src="assets/nodejs.png" alt="Node.js" class="tech-img">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 d-flex align-items-center justify-content-center p-3">
+                            <img src="assets/php.png" alt="Node.js" class="tech-img">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 d-flex align-items-center justify-content-center p-3">
+                            <img src="assets/python.png" alt="Node.js" class="tech-img">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 d-flex align-items-center justify-content-center p-3">
+                            <img src="assets/sql.png" alt="Node.js" class="tech-img">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 d-flex align-items-center justify-content-center p-3">
+                            <img src="assets/vbasic.png" alt="Node.js" class="tech-img">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 d-flex align-items-center justify-content-center p-3">
+                            <img src="assets/vscode.png" alt="Node.js" class="tech-img">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 d-flex align-items-center justify-content-center p-3">
+                            <img src="assets/windows.png" alt="Node.js" class="tech-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Me -->
+        <section id="about" class="py-5">
+            <div class="container">
+                <div class="about-title text-center pb-5">
+                    <h1 class="about-title">About</h1>
+                </div>
+                <div class="row align-items-center">
+                    <!-- Image Column -->
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="about-image-container">
+                            <img src="assets/pfp.jpg" alt="Ronan Kian" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <!-- Text Column -->
+                    <div class="col-lg-6">
+                        <div class="about-texts">
+                            <h1 class="fw-bold">Hello!</h1>
+                            <p class="lead">
+                                I'm Ronan Kian Mangubat from Rosario, Cavite. I'm currently a college student taking
+                                up
+                                Bacheler of Science in Computer Engineering at the Cavite State University CCAT Campus.
+                                I aspire to be a full-stack developer, although I'm still
+                                currently working on improving my back-end development skills while being passionate
+                                about
+                                exploring new
+                                technologies and constantly improving my skills in the field.
+                            </p>
+                            <h1 class="fw-bold">My goal</h1>
+                            <p class="lead">
+                                I see myself as a full-stack web developer working with people who develop and innovate
+                                responsive and progressive web applications that could help the community.
+                            </p>
+                            <div class="about-buttons">
+                                <a href="#projects" class="project-link-button">
+                                    <i class="fas fa-layer-group"></i> Projects
+                                </a>
+                                <a href="https://www.github.com/ronankian" target="_blank" rel="noopener noreferrer"
+                                    class="about-link-button">
+                                    <i class="fab fa-github"></i> Github
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="services-section py-5">
+            <div class="container">
+                <div class="services-title text-center pb-5">
+                    <h1 class="services-title">What I do?</h1>
+                </div>
+                <div class="row g-4">
+                    <!-- Front-End Service -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="service-card text-center">
+                            <i class="fas fa-brush" style="color: rgb(211, 0, 70);"></i>
+                            <h2>Front-End</h2>
+                            <p>I create web design using HTML, CSS while prioritizing the simplicity and ease of use of
+                                the
+                                user-interfaces.</p>
+                        </div>
+                    </div>
+
+                    <!-- Back-End Service -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="service-card text-center">
+                            <i class="fas fa-code" style="color: rgb(211, 0, 70);"></i>
+                            <h2>Back-End</h2>
+                            <p>I'm using backend programming languages like Node.js to handle requests and responses
+                                between the front end and the database.</p>
+                        </div>
+                    </div>
+
+                    <!-- Database Service -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="service-card text-center">
+                            <i class="fas fa-database" style="color: rgb(211, 0, 70);"></i>
+                            <h2>Database</h2>
+                            <p>I model, store, and manage a website data using databases such as MySQL database.</p>
+                        </div>
+                    </div>
+
+                    <!-- Deploy Service -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="service-card text-center">
+                            <i class="fas fa-rocket" style="color: rgb(211, 0, 70);"></i>
+                            <h2>Deploy</h2>
+                            <p>I'm still currently working on this.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="text-center">
+                    <!-- Logo -->
+
+                    <div class="footer-logo ronan-font"><span class="fs-2">R</span>onan</div>
+
+                    <!-- Copyright -->
+                    <p class="footer-text">© 2025 Ronan Kian Mangubat. All Rights Reserved.</p>
+                    <p class="footer-text">This website was inspired by Mark Kenneth Calendario. Check out
+                        their work <a href="https://markcalendario.vercel.app/" target="_blank"
+                            rel="noopener noreferrer">here</a>.
+                    </p>
+
+                    <!-- Social Buttons -->
+                    <div class="footer-buttons">
+                        <a href="https://www.linkedin.com/in/mangubat-ronan-kian-a76467358/" target="_blank"
+                            rel="noopener noreferrer" class="footer-link">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/ronankian" target="_blank" rel="noopener noreferrer"
+                            class="footer-link">
+                            <i class="fab fa-github"></i> Github
+                        </a>
+                        <a href="https://facebook.com/ronankian.mangubat" target="_blank" rel="noopener noreferrer"
+                            class="footer-link">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </a>
+                    </div>
+
+                    <!-- Made with -->
+                    <p class="made-with">Made using Bootstrap</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
